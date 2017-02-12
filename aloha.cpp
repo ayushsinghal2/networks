@@ -13,7 +13,7 @@ int main()
 		{	
 			float x = (float)(rand() % 10000-1) + 1.0 ;
 			x= (float)x/10001;
-			t[i]= (float)(t[i-1]-(log(1-x)/g));
+			t[i]= (float)(t[i-1]-(log(x)/g));
 			/*cout<<t[i]<<endl;*/
 			pack++;
 		}
