@@ -11,9 +11,9 @@ int main()
 		int pack = 0;
 		for(int i = 1;t[i-1]<1000;i++)
 		{	
-			float x = (float)(rand() % 10000-1) + 1.0 ;
+			float x = (int)(rand() % 10000-1) + 1.0 ;
 			x= (float)x/10001;
-			t[i]= (float)(t[i-1]-(log(1-x)/g));
+			t[i]= (int)(t[i-1]-(log(1-x)/g));
 			/*cout<<t[i]<<endl;*/
 			pack++;
 		}
@@ -21,7 +21,7 @@ int main()
 		{
 			for (int j = i+1; j < pack; ++j)
 			{
-				if(abs(t[i]-t[j]) < 1)
+				if(t[i]-t[j] == 0)
 				{
 					coll[i]=true;
 					coll[j]=true;
